@@ -1,0 +1,25 @@
+{
+  "name": "chip8online",
+  "version": "1.0.0",
+  "description": "A CHIP8 Emulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houkagoteatime/cHIp8OnLInE.git"
+  },
+  "keywords": [
+    "chip8"
+  ],
+  "author": "JWong101 nith822",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/houkagoteatime/cHIp8OnLInE/issues"
+  },
+  "homepage": "https://github.com/houkagoteatime/cHIp8OnLInE#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
