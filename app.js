@@ -1,6 +1,20 @@
 const express = require('express')
 const app = express()
+var router = express.Router()
+var verbose = process.env.NODE_ENV != 'test';
 
-app.get('/', (req, res) => res.send("FUCKING NORMIES GET THE FUCK OFF MY BOARD. REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"))
+values = ["Hello", "Express"]
 
-app.listen(3000, () => console.log("Chip8 App listening on port 3000!"))
+router.use(function(req, res, next) {
+	console.log('Time: ' + Date.now() + 'Server access at: ' + req.originalUrl)
+})
+
+app.route('/api/hello')
+	.get(function(req, res) {
+		res.json(values)
+	})
+
+app.listen(3000, () => console.log('Now listening on port 3000!'))
+
+app.use('/', router)
+app.set('view engine' , 'html')
